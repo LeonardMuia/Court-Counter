@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Root Orientation in Linear-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Section 1 Layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal">
+
+        <!-- The Logo -->
+        <ImageView
+            android:id="@+id/Nba-Logo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:src="@drawable/nba"></ImageView>
+        <!-- End of Logo-->
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/Nba-Logo"
+            android:layout_weight="3"
+            android:text="NBA Playoffs 2018"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#fff"
+            android:textSize="16sp"></TextView>
+        <!-- End of Heading -->
+
+        <!-- The Basket Image -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/heading"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/basket"></ImageView>
+        <!-- End of The Basket Image -->
+
+    </LinearLayout>
+    <!-- End of Section 1 Layout -->
+
+    <!-- Section 2 Layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <!-- Team A -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <!-- Team A Logo Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/celtics" />
+                <!-- End of A Team Logo Image -->
+
+                <!-- Team A Name -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:text="Boston Celtics"
+                    android:textAlignment="center"
+                    android:textColor="#1c1c53"
+                    android:textSize="8sp"
+                    android:textStyle="italic"></TextView>
+                <!-- End of Team A Name -->
+            </LinearLayout>
+            <!-- End of Team A -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <!-- The Vs Image (Used an image because of Android Fonts Limitations) -->
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="2"
+                    android:src="@drawable/vs" />
+                <!-- End of the Vs Image -->
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#c40320"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Reset"
+                    android:textColor="#fff"
+                    android:textSize="12dp"
+                    android:onClick="display7"/>
+            </LinearLayout>
+            <!-- Team B -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <!-- Team B Logo Image -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/cleveland" />
+                <!-- End of B Team Logo Image -->
+
+                <!-- Team B Name -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:text="Cleaveland Cavaliers"
+                    android:textAlignment="center"
+                    android:textColor="#1c1c53"
+                    android:textSize="8sp"
+                    android:textStyle="italic"></TextView>
+                <!-- End of Team B Name -->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- End of Section 2 Layout -->
+
+    <!-- Section 3 Layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/gradient"
+        android:paddingTop="5dp"
+        android:text=":: Score from 3 Point Shots ::"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+    <!-- End of Section 3 Layout -->
+
+    <!-- Section 4 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <!-- Team A Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display1"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+            <!-- Team A Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/three_points_team_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team A Scores -->
+
+        </LinearLayout>
+        <!-- End of Team A Points -->
+
+        <!-- Border Image View(The semicolons) -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/colon" />
+        <!-- End of the Border Image View -->
+
+        <!-- Team B Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Team B Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/three_points_team_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team B Scores -->
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:onClick="display4"
+                android:orientation="vertical"
+                android:paddingRight="8dp">
+
+                <!-- Button Increment-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display4"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+        </LinearLayout>
+        <!-- End of Team B Points -->
+
+
+    </LinearLayout>
+    <!-- End of Section 4 Layout -->
+
+    <!-- Section 5 Layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/gradient"
+        android:paddingTop="5dp"
+        android:text=":: Score from 2 Point Shots ::"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+    />
+    <!-- End of Section 5 Layout -->
+
+    <!-- Section 6 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <!-- Team A Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
+
+                <!-- Button Increment-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display2"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+            <!-- Team A Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/two_points_team_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team A Scores -->
+
+        </LinearLayout>
+        <!-- End of Team A Points -->
+
+        <!-- Border Image View(The semicolons) -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/colon" />
+        <!-- End of the Border Image View -->
+
+        <!-- Team B Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Team B Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/two_points_team_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team B Scores -->
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingRight="8dp">
+
+                <!-- Button Increment-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display5"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+        </LinearLayout>
+        <!-- End of Team B Points -->
+        <!-- End of Team B Points -->
+    </LinearLayout>
+    <!-- End of Section 6 Layout -->
+
+    <!-- Section 7 Layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@drawable/gradient"
+        android:paddingTop="5dp"
+        android:text=":: Score from Free Throw ::"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+    <!-- End of Section 7 Layout -->
+
+    <!-- Section 8 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <!-- Team A Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
+
+                <!-- Button Increment-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display3"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+            <!-- Team A Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/single_point_team_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team A Scores -->
+
+        </LinearLayout>
+        <!-- End of Team A Points -->
+
+        <!-- Border Image View(The semicolons) -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:src="@drawable/colon" />
+        <!-- End of the Border Image View -->
+
+        <!-- Team B Points -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <!-- Team B Scores -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- Score Figures -->
+                <TextView
+                    android:id="@+id/single_point_team_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="8dp"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="#1c1c53"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <!-- End of Score Figures -->
+
+                <!-- Conversion Statement -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Points Scored"
+                    android:textAlignment="center"
+                    android:textColor="#cf3442"
+                    android:textSize="10sp" />
+                <!-- End of Conversion Statement-->
+
+            </LinearLayout>
+            <!-- End of Team B Scores -->
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingRight="8dp">
+
+                <!-- Button Increment-->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#bf031c"
+                    android:text="+"
+                    android:textColor="#fff"
+                    android:textSize="16dp"
+                    android:onClick="display6"/>
+                <!-- End of Button Increment -->
+
+            </LinearLayout>
+            <!-- End of Button -->
+
+        </LinearLayout>
+        <!-- End of Team B Points -->
+
+    </LinearLayout>
+    <!-- End of Section 8 Layout -->
+
+    <!-- Section 9 Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:background="#1f2a40"
+        android:orientation="vertical">
+
+        <!-- Winner Statement -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingBottom="4sp"
+            android:paddingLeft="16sp"
+            android:paddingTop="4sp"
+            android:textAlignment="center"
+            android:text=":: Use the + Buttons to Assign Points. From yours truly, Leonard M ::"
+            android:textColor="#fff"
+            android:textSize="10sp" />
+        <!-- End of Winner Statement -->
+
+        <!-- Team A Final Scores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Score Team A Final -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#c40320">
+
+                <!-- Team Logo -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/celtics_thumbnail" />
+                <!-- Team Logo -->
+
+                <!-- Team Logo -->
+                <TextView
+                    android:id="@+id/total_points_teamA"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+                <!-- Team Logo -->
+            </LinearLayout>
+
+            <!-- Final Score Team A Final -->
+
+            <!-- Score Team B Final -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#001329">
+
+                <!-- Team Logo -->
+                <TextView
+                    android:id="@+id/total_points_teamB"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+                <!-- Team Logo -->
+
+                <!-- Team Logo -->
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/cleaveland_thumbnail" />
+                <!-- Team Logo -->
+
+            </LinearLayout>
+
+            <!-- Final Score Team A Final -->
+
+        </LinearLayout>
+        <!-- End of Team A Final Scores -->
+
+        <!-- Team B Final Scores -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Team  Total Points -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <!-- End of Team B Total Points -->
+
+            <!-- Team B Logo -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+            <!-- End of Team B Logo -->
+
+        </LinearLayout>
+        <!-- End of Team B Final Scores -->
+
+    </LinearLayout>
+    <!-- End of Section 9 -->
+
+</LinearLayout>
