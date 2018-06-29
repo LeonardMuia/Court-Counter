@@ -11,11 +11,13 @@ Basic App with A Single Activity and a single Main.java file
 
 
 ## Authors
-* **Leonard Muia** - *Developer* 
+* **Leonard Muia** - *Developer & Designer* 
 
 
 
 
 ## The App Mock/Idea
+
+![My image](http://bit.ly/2tEZEol)
 
 
